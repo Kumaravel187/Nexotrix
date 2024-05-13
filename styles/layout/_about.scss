@@ -9,21 +9,25 @@
   // align-items: center;
 
   &__container {
-
     flex-direction: column;
     gap: 6rem;
 
     .heading-secondary {
       display: inline-block;
       text-transform: uppercase;
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      background-image: linear-gradient(to right, $color-primary, $color-secondary);
+      background-image: linear-gradient(
+        to right,
+        $color-primary,
+        $color-secondary
+      );
       -webkit-background-clip: text;
       color: transparent;
       transition: all 500ms ease-in-out;
-      word-spacing: 2rem;
-      letter-spacing: 0.1rem;
+      // word-spacing: 2rem;
+      // letter-spacing: 0.1rem;
+
       &:hover {
         transform: skewX(180deg) scale(1.1);
         // text-shadow: 0.25rem 0.5rem 2.5rem $color-black;
@@ -32,19 +36,21 @@
 
     .flex-container {
       text-align: start;
+      gap: 4rem;
+      // display: flex;
 
       &--left {
         display: flex;
         flex-direction: column;
 
         .heading-tertiary {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           font-weight: 700;
           text-transform: uppercase;
         }
 
         .paragraph {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
 
           &:not(:last-child) {
             margin-bottom: 3rem;
@@ -56,7 +62,7 @@
         }
       }
 
-      &--right{
+      &--right {
         // border: 1px solid red;
         // display: flex;
       }
@@ -64,4 +70,4 @@
   }
 }
 
-  // button and compoisition styles are found in components
+// button and compoisition styles are found in components

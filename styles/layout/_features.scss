@@ -1,14 +1,21 @@
-  .section-features{
-    padding: 30rem 0;
-    background-image: linear-gradient(to right, $color-secondary-b, $color-primary-b),
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right,
+      $color-secondary-b,
+      $color-primary-b
+    ),
     url(../images/space.jpg);
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
+  transform: skewY(7deg);
+  margin-top: -9rem;
+  // transform: translateY(-2rem);
 
-    &__container{
-        gap: 6rem;
-    }
+  &__container {
+    gap: 4rem;
+    transform: skewY(-7deg);
   }
-  
-  
-  // feature box styles are found in components
+}
+
+// feature box styles are found in components

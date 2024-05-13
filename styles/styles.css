@@ -58,6 +58,23 @@ body {
     transform: translateY(-10rem);
   }
 }
+@keyframes appearInScreen {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2) rotate(0deg);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+    filter: blur(0);
+  }
+}
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -71,7 +88,7 @@ body {
 }
 
 .u-container {
-  max-width: 130rem;
+  max-width: 75vw;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -84,7 +101,7 @@ body {
   border-radius: 10rem;
   transition: all 300ms ease-in-out;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .btn:hover {
   transform: translateY(0.3rem);
@@ -147,7 +164,7 @@ body {
   margin: 0 auto;
 }
 .composition__photo {
-  width: 55%;
+  width: 70%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   position: absolute;
   z-index: 10;
@@ -156,18 +173,18 @@ body {
 }
 .composition__photo--p1 {
   left: 0;
-  top: -2rem;
+  top: -1rem;
 }
 .composition__photo--p2 {
-  right: 0;
-  top: 2rem;
+  right: -3.5rem;
+  top: 5rem;
 }
 .composition__photo--p3 {
-  left: 20%;
-  top: 10rem;
+  left: 15%;
+  top: 15rem;
 }
 .composition__photo:hover {
-  outline: 1.5rem solid rgb(95, 183, 207);
+  outline: 1rem solid rgb(90, 121, 200);
   transform: scale(1.05) translateY(-1rem);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
@@ -182,7 +199,7 @@ body {
   gap: 2rem;
   background-color: whitesmoke;
   font-size: 1.5rem;
-  padding: 6rem 2.5rem;
+  padding: 4rem 2.5rem;
   text-align: center;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -192,7 +209,7 @@ body {
 .feature-box__icon {
   display: flex;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 7rem;
   background-image: linear-gradient(to right, rgb(95, 183, 207), rgb(90, 121, 200));
   -webkit-background-clip: text;
   color: transparent;
@@ -202,6 +219,12 @@ body {
 .feature-box__heading {
   margin-top: 1rem;
   margin-bottom: -1rem;
+  text-transform: uppercase;
+  font-size: 1.45rem;
+  letter-spacing: 0.1rem;
+}
+.feature-box__text {
+  font-size: 1.45rem;
 }
 .feature-box:hover {
   transform: translateY(-2rem) scale(1.1);
@@ -213,8 +236,8 @@ body {
   background-image: linear-gradient(to right, rgba(90, 121, 200, 0.8), rgba(95, 183, 207, 0.8)), url(../images/robot.jpg);
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 60vh);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 60vh);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70vh);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70vh);
 }
 .header__logo-box {
   position: absolute;
@@ -222,7 +245,8 @@ body {
   left: 8rem;
 }
 .header__logo-box .logo {
-  height: 12rem;
+  height: 5rem;
+  animation: appearInScreen 1000ms ease-in-out;
 }
 .header__text-box {
   position: absolute;
@@ -240,17 +264,17 @@ body {
 .header__text-box .heading-primary--main {
   display: block;
   padding-left: 4rem;
-  font-size: 9rem;
+  font-size: 6rem;
   font-weight: 600;
-  letter-spacing: 3.5rem;
+  letter-spacing: 2.5rem;
   animation: moveInLeft 1000ms ease-out;
   /* animation-delay: 2000ms; 
-        animation-iteration-count
-        animation-timing-function*/
+          animation-iteration-count
+          animation-timing-function*/
 }
 .header__text-box .heading-primary--sub {
   display: block;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 1.5rem;
   animation-name: moveInRight;
@@ -272,32 +296,31 @@ body {
 .section-about__container .heading-secondary {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   background-image: linear-gradient(to right, rgb(95, 183, 207), rgb(90, 121, 200));
   -webkit-background-clip: text;
   color: transparent;
   transition: all 500ms ease-in-out;
-  word-spacing: 2rem;
-  letter-spacing: 0.1rem;
 }
 .section-about__container .heading-secondary:hover {
   transform: skewX(180deg) scale(1.1);
 }
 .section-about__container .flex-container {
   text-align: start;
+  gap: 4rem;
 }
 .section-about__container .flex-container--left {
   display: flex;
   flex-direction: column;
 }
 .section-about__container .flex-container--left .heading-tertiary {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 .section-about__container .flex-container--left .paragraph {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .section-about__container .flex-container--left .paragraph:not(:last-child) {
   margin-bottom: 3rem;
@@ -306,11 +329,14 @@ body {
   align-self: flex-start;
 }
 .section-features {
-  padding: 30rem 0;
+  padding: 20rem 0;
   background-image: linear-gradient(to right, rgba(90, 121, 200, 0.6), rgba(95, 183, 207, 0.6)), url(../images/space.jpg);
   background-size: cover;
   background-position: center;
+  transform: skewY(7deg);
+  margin-top: -9rem;
 }
 .section-features__container {
-  gap: 6rem;
+  gap: 4rem;
+  transform: skewY(-7deg);
 }/*# sourceMappingURL=styles.css.map */
