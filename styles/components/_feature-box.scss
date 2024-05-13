@@ -1,0 +1,41 @@
+.feature-box{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 2rem;
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    padding: 6rem 2.5rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    transition: transform 300ms ease-in-out;
+    cursor: pointer;
+    &__icon{
+        display: flex;
+        justify-content: center;
+        font-size: 6rem;
+      
+        // display: inline-block;
+        background-image: linear-gradient(to right, $color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin: 0;
+        padding: 0;
+
+
+    }
+
+    &__heading{
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+        
+    }
+
+    &__text{
+    }
+
+    &:hover{
+        transform: translateY(-2rem) scale(1.1);
+    }
+}

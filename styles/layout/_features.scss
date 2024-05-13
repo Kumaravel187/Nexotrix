@@ -1,0 +1,14 @@
+  .section-features{
+    padding: 30rem 0;
+    background-image: linear-gradient(to right, $color-secondary-b, $color-primary-b),
+    url(../images/space.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__container{
+        gap: 6rem;
+    }
+  }
+  
+  
+  // feature box styles are found in components

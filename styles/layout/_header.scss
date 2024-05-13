@@ -1,0 +1,65 @@
+.header {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right, $color-secondary-a, $color-primary-a),
+      url(../images/robot.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 60vh);
+  
+    &__logo-box {
+      position: absolute;
+      top: 5rem;
+      left: 8rem;
+      .logo {
+        height: 12rem;
+      }
+    }
+  
+    &__text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+  
+      .heading-primary {
+        color: $color-white;
+        text-transform: uppercase;
+        /* backface-visibility: hidden; */
+        margin-bottom: 3.5rem;
+  
+        // background-color: black;
+  
+        &--main {
+          display: block;
+          padding-left: 4rem;
+          font-size: 9rem;
+          font-weight: 600;
+          letter-spacing: 3.5rem;
+          animation: moveInLeft 1000ms ease-out;
+          //   transform: translateX(0.9rem);
+  
+          /* animation-delay: 2000ms; 
+                animation-iteration-count
+                animation-timing-function*/
+        }
+  
+        &--sub {
+          display: block;
+          font-size: 2.5rem;
+          font-weight: 400;
+          letter-spacing: 1.5rem;
+          animation-name: moveInRight;
+          animation-duration: 1000ms;
+          animation-timing-function: ease-out;
+          padding-left: 1rem;
+          //   padding-right: 2rem;
+          /* animation-delay: 2000ms; */
+        }
+      }
+    }
+  }
+  
+
+  // button styles are found in components

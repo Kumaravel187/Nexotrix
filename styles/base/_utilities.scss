@@ -1,0 +1,18 @@
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    &--left, &--right{
+      flex: 1;
+    }
+  }
+
+  .u-margin-bottom-small{
+    margin-bottom: 1.5rem;
+  }
+
+  .u-container{
+    max-width: 130rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+  }
